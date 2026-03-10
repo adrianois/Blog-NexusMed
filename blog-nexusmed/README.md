@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog NexusMed
 
-## Getting Started
+> **Gestão completa para clínicas modernas.**
 
-First, run the development server:
+Blog especializado em gestão clínica, desenvolvido com Next.js 15 + TypeScript + Tailwind CSS.
+
+## 🚀 Como rodar localmente
 
 ```bash
+cd blog-nexusmed
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+blog-nexusmed/
+├── app/
+│   ├── layout.tsx          # Layout global com Header e Footer
+│   ├── page.tsx            # Página inicial
+│   ├── globals.css         # Variáveis de design NexusMed + Tailwind
+│   ├── blog/
+│   │   ├── page.tsx        # Listagem de todos os artigos
+│   │   └── [slug]/
+│   │       └── page.tsx    # Página de artigo individual
+│   ├── categorias/
+│   │   └── [categoria]/
+│   │       └── page.tsx    # Página de categoria
+│   └── sobre/
+│       └── page.tsx        # Sobre o blog
+├── components/
+│   ├── Header.tsx          # Navegação principal com menu dropdown
+│   ├── Footer.tsx          # Rodapé com links e categorias
+│   ├── Hero.tsx            # Banner principal da home
+│   ├── CategoryGrid.tsx    # Grid de categorias
+│   ├── PostCard.tsx        # Card de artigo
+│   ├── FeaturedPosts.tsx   # Seção de posts em destaque
+│   ├── PostHeader.tsx      # Cabeçalho do artigo individual
+│   └── Newsletter.tsx      # CTA de inscrição por e-mail
+└── lib/
+    ├── posts.ts            # Dados e funções dos artigos
+    └── categories.ts       # Definição das categorias
+```
 
-## Learn More
+## 🎨 Identidade Visual NexusMed
 
-To learn more about Next.js, take a look at the following resources:
+| Token | Valor | Uso |
+|---|---|---|
+| `--nexus-primary` | `#0F6FBF` | Cor principal (azul) |
+| `--nexus-primary-dark` | `#0A4F8A` | Títulos, gradiente |
+| `--nexus-accent` | `#00C7A3` | Destaque (verde-água) |
+| `--nexus-gray-900` | `#0F172A` | Fundo do footer |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Adicionando Novos Artigos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edite o arquivo `lib/posts.ts` e adicione um novo objeto ao array `POSTS`:
 
-## Deploy on Vercel
+```ts
+{
+  slug: 'meu-novo-artigo',
+  title: 'Título do Artigo',
+  excerpt: 'Resumo breve do conteúdo.',
+  content: `<h2>...</h2><p>...</p>`,
+  category: 'gestao-financeira', // slug da categoria
+  categoryName: 'Gestão Financeira',
+  author: 'Nome do Autor',
+  authorRole: 'Cargo',
+  date: '2026-03-10',
+  readTime: 5,
+  tags: ['tag1', 'tag2'],
+  coverEmoji: '💡',
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗂️ Categorias Disponíveis
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `gestao-financeira` — Gestão Financeira
+- `experiencia-do-paciente` — Experiência do Paciente
+- `tecnologia-em-saude` — Tecnologia em Saúde
+- `regulamentacao` — Regulamentação
+- `marketing-medico` — Marketing Médico
+- `gestao-de-equipes` — Gestão de Equipes
+
+## 🛠️ Tecnologias
+
+- [Next.js 15](https://nextjs.org/) — App Router
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
