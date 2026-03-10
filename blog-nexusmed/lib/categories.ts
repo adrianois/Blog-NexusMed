@@ -25,6 +25,7 @@ export const CATEGORIES: Category[] = [
     description: 'Estratégias para encantar, fidelizar e engajar pacientes.',
     color: '#00875A',
     bg: '#E0F5EE',
+    href: '/experiencia-do-paciente',
   },
   {
     slug: 'tecnologia-em-saude',
