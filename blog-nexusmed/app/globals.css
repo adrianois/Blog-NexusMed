@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
+/* Google Fonts - Poppins + Inter */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --nexus-primary: #0F6FBF;
-  --nexus-primary-dark: #0A4F8A;
-  --nexus-primary-light: #E8F4FF;
-  --nexus-accent: #00C7A3;
-  --nexus-accent-dark: #009E82;
-  --nexus-gray-50: #F8FAFC;
-  --nexus-gray-100: #F1F5F9;
-  --nexus-gray-200: #E2E8F0;
-  --nexus-gray-600: #475569;
-  --nexus-gray-800: #1E293B;
-  --nexus-gray-900: #0F172A;
+  /* === CORES OFICIAIS NEXUSMED === */
+  --nexus-navy:        #0D2B5E;   /* Azul marinho — fundo header/footer */
+  --nexus-navy-light:  #14377A;   /* Azul marinho claro */
+  --nexus-blue:        #1E88E5;   /* Azul médico — cor primária */
+  --nexus-blue-dark:   #1565C0;   /* Azul primário escuro */
+  --nexus-blue-light:  #E3F2FD;   /* Azul muito claro — fundos suaves */
+  --nexus-green:       #00A86B;   /* Verde saúde — cor de destaque */
+  --nexus-green-dark:  #007A4D;   /* Verde escuro */
+  --nexus-green-light: #E0F5EE;   /* Verde claro — tags, badges */
+
+  /* === NEUTROS === */
+  --nexus-white:       #FFFFFF;
+  --nexus-gray-50:     #F8FAFC;
+  --nexus-gray-100:    #F1F5F9;
+  --nexus-gray-200:    #E2E8F0;
+  --nexus-gray-400:    #94A3B8;
+  --nexus-gray-600:    #475569;
+  --nexus-gray-800:    #1E293B;
+  --nexus-gray-900:    #0F172A;
 }
 
 * {
@@ -22,42 +33,125 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: var(--nexus-gray-50);
   color: var(--nexus-gray-800);
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* === GRADIENTE OFICIAL === */
 .nexus-gradient {
-  background: linear-gradient(135deg, var(--nexus-primary-dark) 0%, var(--nexus-primary) 60%, var(--nexus-accent) 100%);
+  background: linear-gradient(135deg, var(--nexus-navy) 0%, var(--nexus-navy-light) 50%, var(--nexus-blue) 100%);
 }
 
+.nexus-gradient-green {
+  background: linear-gradient(135deg, var(--nexus-navy) 0%, var(--nexus-blue-dark) 60%, var(--nexus-green) 100%);
+}
+
+/* === CARDS === */
 .nexus-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--nexus-gray-200);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .nexus-card:hover {
-  box-shadow: 0 8px 30px rgba(15, 111, 191, 0.12);
-  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(30, 136, 229, 0.13);
+  transform: translateY(-3px);
 }
 
+/* === TAGS === */
 .nexus-tag {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
   padding: 4px 12px;
   border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.025em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
-.prose h2 { color: var(--nexus-primary-dark); font-weight: 700; margin-top: 2rem; }
-.prose h3 { color: var(--nexus-gray-800); font-weight: 600; margin-top: 1.5rem; }
-.prose p { color: var(--nexus-gray-600); margin-bottom: 1rem; }
-.prose ul { color: var(--nexus-gray-600); padding-left: 1.5rem; }
-.prose li { margin-bottom: 0.5rem; }
+/* === BOTÕES === */
+.nexus-btn-primary {
+  background: var(--nexus-blue);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.nexus-btn-primary:hover {
+  background: var(--nexus-blue-dark);
+  transform: translateY(-1px);
+}
 
-::-webkit-scrollbar { width: 6px; }
+.nexus-btn-outline {
+  border: 2px solid rgba(255,255,255,0.35);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.nexus-btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* === PROSE (artigos) === */
+.prose h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--nexus-navy);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  padding-left: 14px;
+  border-left: 4px solid var(--nexus-green);
+}
+.prose h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--nexus-blue-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose p {
+  color: var(--nexus-gray-600);
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+}
+.prose ul {
+  color: var(--nexus-gray-600);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.prose li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.prose li::marker {
+  color: var(--nexus-green);
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--nexus-gray-100); }
-::-webkit-scrollbar-thumb { background: var(--nexus-primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--nexus-blue); border-radius: 3px; }
