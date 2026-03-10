@@ -1,6 +1,24 @@
 import Link from 'next/link';
 import { CATEGORIES, getCategoryHref } from '@/lib/categories';
 
+const SOCIAL_LINKS = [
+  {
+    label: 'in',
+    title: 'Instagram',
+    href: 'https://www.instagram.com/nexusmed.app',
+  },
+  {
+    label: 'ig',
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/groups/17941017/',
+  },
+  {
+    label: 'yt',
+    title: 'YouTube',
+    href: 'https://www.youtube.com/channel/UCkoQzmDQf5ADas4N_mjUo6A',
+  },
+];
+
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--nexus-navy)' }}>
@@ -25,9 +43,14 @@ export default function Footer() {
               Gestão completa para clínicas modernas. Conteúdo especializado para profissionais de saúde.
             </p>
             <div className="flex gap-2">
-              {[{ label: 'in' }, { label: 'ig' }, { label: 'yt' }].map((s) => (
-                <a key={s.label} href="#"
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white transition-colors"
+              {SOCIAL_LINKS.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  title={s.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white transition-opacity hover:opacity-70"
                   style={{ background: 'rgba(255,255,255,0.1)', fontFamily: 'Poppins, sans-serif' }}
                 >
                   {s.label}
@@ -64,7 +87,9 @@ export default function Footer() {
                 { href: 'https://nexusmed.com.br', label: 'Site NexusMed ↗' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm transition-colors hover:text-white"
+                  <a
+                    href={link.href}
+                    className="text-sm transition-colors hover:text-white"
                     style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Inter, sans-serif' }}
                   >
                     {link.label}
@@ -76,7 +101,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-3"
+        <div
+          className="mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-3"
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.3)', fontFamily: 'Inter, sans-serif' }}>
