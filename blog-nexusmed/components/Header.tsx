@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { CATEGORIES } from '@/lib/categories';
+import { CATEGORIES, getCategoryHref } from '@/lib/categories';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,26 +32,35 @@ export default function Header() {
           {/* Nav Desktop */}
           <nav className="hidden md:flex items-center gap-6">
             <Link href="/blog" className="text-sm font-medium transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter, sans-serif' }}>Artigos</Link>
-            <Link href="/gestao-financeira" className="text-sm font-medium transition-colors hover:text-white flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter, sans-serif' }}>
-              💰 Gestão Financeira
-            </Link>
+
+            {/* Dropdown Categorias */}
             <div className="relative group">
               <button className="text-sm font-medium flex items-center gap-1 transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter, sans-serif' }}>
                 Categorias
                 <svg className="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </button>
-              <div className="absolute top-full left-0 mt-3 w-60 bg-white rounded-2xl shadow-xl border p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" style={{ borderColor: 'var(--nexus-gray-200)' }}>
+              <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" style={{ borderColor: 'var(--nexus-gray-200)' }}>
                 {CATEGORIES.map((cat) => (
-                  <Link key={cat.slug} href={`/categorias/${cat.slug}`}
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm hover:bg-gray-50 transition-colors"
+                  <Link
+                    key={cat.slug}
+                    href={getCategoryHref(cat)}
+                    className="flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl text-sm hover:bg-gray-50 transition-colors group/item"
                     style={{ color: 'var(--nexus-gray-800)', fontFamily: 'Inter, sans-serif' }}
                   >
-                    <span className="text-base">{cat.icon}</span>
-                    <span>{cat.name}</span>
+                    <span className="flex items-center gap-2">
+                      <span className="text-base">{cat.icon}</span>
+                      <span>{cat.name}</span>
+                    </span>
+                    {cat.href && (
+                      <span className="text-xs font-semibold opacity-0 group-hover/item:opacity-100 transition-opacity" style={{ color: cat.color }}>
+                        Destaque
+                      </span>
+                    )}
                   </Link>
                 ))}
               </div>
             </div>
+
             <Link href="/sobre" className="text-sm font-medium transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter, sans-serif' }}>Sobre</Link>
             <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary">Conheça o Sistema</a>
           </nav>
@@ -70,10 +79,17 @@ export default function Header() {
           <div className="md:hidden py-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <div className="flex flex-col gap-1">
               <Link href="/blog" className="px-3 py-2.5 rounded-xl text-sm font-medium text-white hover:bg-white/10" onClick={() => setMenuOpen(false)}>Artigos</Link>
-              <Link href="/gestao-financeira" className="px-3 py-2.5 rounded-xl text-sm font-medium text-white hover:bg-white/10" onClick={() => setMenuOpen(false)}>💰 Gestão Financeira</Link>
               {CATEGORIES.map((cat) => (
-                <Link key={cat.slug} href={`/categorias/${cat.slug}`} className="px-3 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:bg-white/10" style={{ color: 'rgba(255,255,255,0.8)' }} onClick={() => setMenuOpen(false)}>
-                  <span>{cat.icon}</span> {cat.name}
+                <Link
+                  key={cat.slug}
+                  href={getCategoryHref(cat)}
+                  className="px-3 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:bg-white/10"
+                  style={{ color: 'rgba(255,255,255,0.8)' }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span>{cat.icon}</span>
+                  <span>{cat.name}</span>
+                  {cat.href && <span className="ml-auto text-xs font-bold" style={{ color: 'var(--nexus-green)' }}>★</span>}
                 </Link>
               ))}
               <Link href="/sobre" className="px-3 py-2.5 rounded-xl text-sm font-medium text-white hover:bg-white/10" onClick={() => setMenuOpen(false)}>Sobre</Link>

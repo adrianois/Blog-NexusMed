@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CATEGORIES } from '@/lib/categories';
+import { CATEGORIES, getCategoryHref } from '@/lib/categories';
 
 export default function CategoryGrid() {
   return (
@@ -17,7 +17,7 @@ export default function CategoryGrid() {
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.slug}
-              href={`/categorias/${cat.slug}`}
+              href={getCategoryHref(cat)}
               className="nexus-card flex flex-col items-center text-center p-5 gap-3 cursor-pointer"
             >
               <div
@@ -29,6 +29,11 @@ export default function CategoryGrid() {
               <span className="text-xs font-semibold leading-tight" style={{ color: 'var(--nexus-navy)', fontFamily: 'Poppins, sans-serif' }}>
                 {cat.name}
               </span>
+              {cat.href && (
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: cat.bg, color: cat.color, fontFamily: 'Inter, sans-serif' }}>
+                  Ver tudo →
+                </span>
+              )}
             </Link>
           ))}
         </div>

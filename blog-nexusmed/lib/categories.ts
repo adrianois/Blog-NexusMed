@@ -5,6 +5,7 @@ export interface Category {
   description: string;
   color: string;
   bg: string;
+  href?: string; // link customizado (opcional) — se não definido, usa /categorias/[slug]
 }
 
 export const CATEGORIES: Category[] = [
@@ -15,6 +16,7 @@ export const CATEGORIES: Category[] = [
     description: 'Controle de custos, receitas, faturamento e saúde financeira da clínica.',
     color: '#1565C0',
     bg: '#E3F2FD',
+    href: '/gestao-financeira', // página dedicada
   },
   {
     slug: 'experiencia-do-paciente',
@@ -57,3 +59,8 @@ export const CATEGORIES: Category[] = [
     bg: '#EFF6FF',
   },
 ];
+
+/** Retorna o href correto para uma categoria */
+export function getCategoryHref(cat: Category): string {
+  return cat.href ?? `/categorias/${cat.slug}`;
+}
