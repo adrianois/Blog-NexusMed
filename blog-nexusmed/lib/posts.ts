@@ -17,7 +17,7 @@ const POSTS: Post[] = [
   {
     slug: 'como-reduzir-faltas-agendamentos',
     title: 'Como Reduzir Faltas e No-Shows na Sua Clínica em até 60%',
-    excerpt: 'Descubra estratégias comprovadas de confirmação automática, listas de espera e politica de cancelamento para maximizar a ocupação da sua agenda.',
+    excerpt: 'Descubra estratégias comprovadas de confirmação automática, listas de espera e política de cancelamento para maximizar a ocupação da sua agenda.',
     content: `
       <h2>O Problema das Faltas na Clínica</h2>
       <p>As faltas não comunicadas (no-shows) representam, em média, 18% das consultas agendadas em clínicas brasileiras. Cada falta significa receita perdida, profissional ocioso e paciente sem atendimento.</p>
@@ -38,6 +38,83 @@ const POSTS: Post[] = [
     readTime: 5,
     tags: ['agendamento', 'produtividade', 'receita'],
     coverEmoji: '📅',
+  },
+  {
+    slug: 'fluxo-de-caixa-clinica',
+    title: 'Fluxo de Caixa para Clínicas: Como Montar, Controlar e Não Quebrar',
+    excerpt: 'Guia completo para estruturar o fluxo de caixa da sua clínica, antecipar crise de liquidez e garantir capital de giro suficiente para crescer.',
+    content: `
+      <h2>Por que o Fluxo de Caixa é Vital</h2>
+      <p>Muitas clínicas lucrativas fecham as portas por falta de liquidez. Lucro e caixa são coisas diferentes: você pode ter um ótimo mês de faturamento e ainda assim não ter dinheiro para pagar a folha de pagamento.</p>
+      <h2>Estrutura Básica do Fluxo de Caixa</h2>
+      <p>Organize seu fluxo em três grandes grupos: <strong>Entradas</strong> (consultas particulares, recebimento de convênios, procedimentos), <strong>Saídas Fixas</strong> (aluguel, folha, sistemas, contratos) e <strong>Saídas Variáveis</strong> (insumos, manução, marketing).</p>
+      <h2>Ciclo Financeiro da Clínica</h2>
+      <p>O principal desafio é o descasamento entre prestação de serviço e recebimento. Consultas particulares recebem no ato. Convênios pagam em 30-90 dias. Esse intervalo precisa de capital de giro.</p>
+      <h2>Reserva de Emergência</h2>
+      <p>Mantenha uma reserva equivalente a 3 meses de custos fixos em conta separada. Isso protege a clínica de sazonalidades, atrasos de convênios e imprevistos como equipamentos que quebram.</p>
+      <h2>Ferramentas Práticas</h2>
+      <p>Use planilhas ou, preferencialmente, um sistema de gestão integrado que projete o fluxo de caixa automaticamente com base nas consultas agendadas e histórico de recebimentos.</p>
+      <h2>Antecipação de Recebíveis</h2>
+      <p>Em momentos de aperto, negocie antecipação de recebíveis de convênios com fintechs especializadas em saúde. As taxas costumam ser menores que cheque especial ou cartão empresarial.</p>
+    `,
+    category: 'gestao-financeira',
+    categoryName: 'Gestão Financeira',
+    author: 'Equipe NexusMed',
+    authorRole: 'Gestão Financeira',
+    date: '2026-03-07',
+    readTime: 8,
+    tags: ['fluxo de caixa', 'liquidez', 'capital de giro'],
+    coverEmoji: '🏦',
+  },
+  {
+    slug: 'precificacao-de-procedimentos',
+    title: 'Como Precificar Procedimentos Médicos: Método Completo para Não Trabalhar no Prejuízo',
+    excerpt: 'Aprenda a calcular o preço justo dos seus procedimentos considerando custos diretos, custos indiretos, pró-labore e margem de lucro desejada.',
+    content: `
+      <h2>O Erro Mais Comum na Precificação</h2>
+      <p>A maioria dos médicos precifica seus serviços baseando-se no que o concorrente cobra ou no valor de tabela dos convênios — sem nunca calcular se esse valor cobre todos os seus custos. Resultado: trabalho no prejuízo sem perceber.</p>
+      <h2>Componentes do Preço</h2>
+      <p><strong>1. Custo Direto:</strong> material usado no procedimento, luvas, medicamentos, etc. <strong>2. Custo Indireto:</strong> rateio proporcional de aluguel, energia, equipe, sistemas. <strong>3. Pró-labore:</strong> a remuneração do médico pelo tempo gasto. <strong>4. Margem de Lucro:</strong> o retorno do investimento na clínica.</p>
+      <h2>Fórmula de Precificação</h2>
+      <p>Preço Mínimo = (Custo Direto + Custo Indireto rateado + Pró-labore por procedimento) ÷ (1 - Margem desejada). Esse é o piso — abaixo disso você está pagando para trabalhar.</p>
+      <h2>Reajuste Anual Obrigatório</h2>
+      <p>O IPCA-Saúde historicamente supera o IPCA geral. Reajuste sua tabela anualmente, no mínimo pelo IPCA-Saúde. Informe os pacientes com antecedência e justifique com transparência.</p>
+      <h2>Tabela Particular vs. Convênio</h2>
+      <p>Compare o valor recebido por procedimento no particular versus o convênio. Se o convênio paga abaixo do custo, considere renegociar o contrato ou descredenciar. Não aceite valores que inviabilizem a sustentabilidade da clínica.</p>
+    `,
+    category: 'gestao-financeira',
+    categoryName: 'Gestão Financeira',
+    author: 'Equipe NexusMed',
+    authorRole: 'Gestão Financeira',
+    date: '2026-03-04',
+    readTime: 9,
+    tags: ['precificação', 'custos', 'margem'],
+    coverEmoji: '💲',
+  },
+  {
+    slug: 'glosas-de-convenios-como-reduzir',
+    title: 'Glosas de Convênios: Causas, Impacto Financeiro e Como Reduzir para Menos de 3%',
+    excerpt: 'Entenda os principais motivos de glosa em planos de saúde, como estruturar o processo de faturamento e recursar glosas de forma eficaz.',
+    content: `
+      <h2>O Que é Glosa e Quanto Ela Custa</h2>
+      <p>Glosa é a negativa de pagamento do plano de saúde por um procedimento faturado. A média de glosa em clínicas brasileiras gira em torno de 8-12% do faturamento com convênios — um valor que pode representar dezenas de milhares de reais por ano.</p>
+      <h2>Principais Causas de Glosa</h2>
+      <p><strong>Erros de codificação:</strong> códigos TUSS errados ou desatualizados. <strong>Documentação incompleta:</strong> relatórios, laudos ou autorizações ausentes. <strong>Prazo:</strong> faturamento enviado fora do prazo contratual. <strong>Elegibilidade:</strong> paciente sem cobertura para o procedimento realizado.</p>
+      <h2>Processo de Recurso de Glosa</h2>
+      <p>Toda glosa pode ser recorrida. Documente cada atendimento com rigor, guarde todos os comprovantes de autorização e protocole recursos dentro do prazo contratual. Clínicas com processo estruturado recuperam até 60% das glosas recorridas.</p>
+      <h2>Como Prevenir Glosas</h2>
+      <p>Invista em: treinamento constante da equipe de faturamento, sistema de gestão com TISS integrado, auditoria interna antes do envio das guias e atualização periódica das tabelas de cobertura de cada convênio.</p>
+      <h2>Meta: Abaixo de 3%</h2>
+      <p>Clínicas bem geridas mantêm taxa de glosa abaixo de 3%. Para chegar lá, estabeleça um painel de acompanhamento mensal por convênio e atue preventivamente nos códigos mais glosados.</p>
+    `,
+    category: 'gestao-financeira',
+    categoryName: 'Gestão Financeira',
+    author: 'Equipe NexusMed',
+    authorRole: 'Faturamento & Convênios',
+    date: '2026-02-28',
+    readTime: 7,
+    tags: ['glosa', 'convênios', 'faturamento', 'TISS'],
+    coverEmoji: '📝',
   },
   {
     slug: 'lgpd-clinicas-guia-pratico',
