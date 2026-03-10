@@ -42,6 +42,7 @@ export const CATEGORIES: Category[] = [
     description: 'CFM, LGPD, ANS, vigilância sanitária e conformidade legal.',
     color: '#B45309',
     bg: '#FEF3C7',
+    href: '/regulamentacao',
   },
   {
     slug: 'marketing-medico',
