@@ -23,7 +23,7 @@ export default function GestaoFinanceiraPage() {
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <span className="nexus-tag" style={{ background: 'var(--nexus-blue-light)', color: 'var(--nexus-blue)' }}>📊 Indicadores</span>
+            <span className="nexus-tag" style={{ background: '#E3F2FD', color: '#1565C0' }}>📊 Indicadores</span>
             <h2 className="text-2xl font-bold mt-3" style={{ color: 'var(--nexus-navy)', fontFamily: 'Poppins, sans-serif' }}>
               KPIs Financeiros Essenciais para Clínicas
             </h2>
@@ -39,7 +39,7 @@ export default function GestaoFinanceiraPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
-            <span className="nexus-tag" style={{ background: 'var(--nexus-green-light)', color: 'var(--nexus-green)' }}>📈 Benchmarks</span>
+            <span className="nexus-tag" style={{ background: '#E0F5EE', color: '#00875A' }}>📈 Benchmarks</span>
             <h2 className="text-2xl font-bold mt-3" style={{ color: 'var(--nexus-navy)', fontFamily: 'Poppins, sans-serif' }}>
               Benchmarks do Setor de Saúde
             </h2>
@@ -55,7 +55,7 @@ export default function GestaoFinanceiraPage() {
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <span className="nexus-tag" style={{ background: 'var(--nexus-blue-light)', color: 'var(--nexus-blue)' }}>✅ Checklists</span>
+            <span className="nexus-tag" style={{ background: '#E3F2FD', color: '#1565C0' }}>✅ Checklists</span>
             <h2 className="text-2xl font-bold mt-3" style={{ color: 'var(--nexus-navy)', fontFamily: 'Poppins, sans-serif' }}>
               Rotinas Financeiras da Clínica
             </h2>
@@ -66,10 +66,10 @@ export default function GestaoFinanceiraPage() {
 
       {/* Artigos */}
       {posts.length > 0 && (
-        <section className="py-16 bg-white">
+        <section id="artigos" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="mb-8">
-              <span className="nexus-tag" style={{ background: 'var(--nexus-blue-light)', color: 'var(--nexus-blue)' }}>📝 Artigos</span>
+              <span className="nexus-tag" style={{ background: '#E3F2FD', color: '#1565C0' }}>📝 Artigos</span>
               <h2 className="text-2xl font-bold mt-3" style={{ color: 'var(--nexus-navy)', fontFamily: 'Poppins, sans-serif' }}>
                 Artigos sobre Gestão Financeira
               </h2>
@@ -94,12 +94,10 @@ export default function GestaoFinanceiraPage() {
             O NexusMed integra faturamento, fluxo de caixa, controle de convênios e relatórios financeiros em um único painel. Experimente grátis por 14 dias.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: 'var(--nexus-green)' }}>
+            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#1565C0' }}>
               Experimentar Grátis
             </a>
-            <Link href="/blog" className="nexus-btn-outline">
-              Ver Todos os Artigos
-            </Link>
+            <Link href="/blog" className="nexus-btn-outline">Ver Todos os Artigos</Link>
           </div>
         </div>
       </section>

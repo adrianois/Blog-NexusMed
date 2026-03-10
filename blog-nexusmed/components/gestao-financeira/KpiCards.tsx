@@ -6,8 +6,8 @@ const KPIS = [
     formula: 'Receita ÷ Nº de consultas',
     meta: 'Aumentar progressivamente',
     tip: 'Revise a precificação anualmente considerando inflação e IPCA-Saúde.',
-    color: 'var(--nexus-blue)',
-    bg: 'var(--nexus-blue-light)',
+    color: '#1565C0',
+    bg: '#E3F2FD',
   },
   {
     icon: '📊',
@@ -16,8 +16,8 @@ const KPIS = [
     formula: '(Lucro ÷ Receita) × 100',
     meta: 'Ideal: acima de 15%',
     tip: 'Clínicas bem geridas atingem margens entre 20% e 35%.',
-    color: 'var(--nexus-green)',
-    bg: 'var(--nexus-green-light)',
+    color: '#00875A',
+    bg: '#E0F5EE',
   },
   {
     icon: '🔄',
@@ -27,7 +27,7 @@ const KPIS = [
     meta: 'Ideal: acima de 80%',
     tip: 'Abaixo de 70% indica necessidade de revisar a captação ou agenda.',
     color: '#7C3AED',
-    bg: '#F3EFFE',
+    bg: '#EDE9FE',
   },
   {
     icon: '⚠️',
@@ -46,8 +46,8 @@ const KPIS = [
     formula: 'Ativo Circulante - Passivo Circulante',
     meta: 'Manter reserva de 3 meses de custos fixos',
     tip: 'Separe uma conta exclusiva para reserva de emergência da clínica.',
-    color: 'var(--nexus-blue-dark)',
-    bg: 'var(--nexus-blue-light)',
+    color: '#1565C0',
+    bg: '#E3F2FD',
   },
   {
     icon: '📅',
@@ -56,8 +56,8 @@ const KPIS = [
     formula: '(Contas a receber ÷ Receita mensal) × 30',
     meta: 'Ideal: abaixo de 30 dias',
     tip: 'Convênios costumam pagar em 30-60 dias. Negocie antecipação de recebíveis.',
-    color: 'var(--nexus-green-dark)',
-    bg: 'var(--nexus-green-light)',
+    color: '#00875A',
+    bg: '#E0F5EE',
   },
 ];
 
