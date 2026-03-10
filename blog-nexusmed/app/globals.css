@@ -1,157 +1,232 @@
-/* === GOOGLE FONTS — deve vir ANTES de qualquer outra regra === */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  /* === CORES OFICIAIS NEXUSMED === */
-  --nexus-navy:        #0D2B5E;   /* Azul marinho — fundo header/footer */
-  --nexus-navy-light:  #14377A;   /* Azul marinho claro */
-  --nexus-blue:        #1E88E5;   /* Azul médico — cor primária */
-  --nexus-blue-dark:   #1565C0;   /* Azul primário escuro */
-  --nexus-blue-light:  #E3F2FD;   /* Azul muito claro — fundos suaves */
-  --nexus-green:       #00A86B;   /* Verde saúde — cor de destaque */
-  --nexus-green-dark:  #007A4D;   /* Verde escuro */
-  --nexus-green-light: #E0F5EE;   /* Verde claro — tags, badges */
-
-  /* === NEUTROS === */
-  --nexus-white:       #FFFFFF;
-  --nexus-gray-50:     #F8FAFC;
-  --nexus-gray-100:    #F1F5F9;
-  --nexus-gray-200:    #E2E8F0;
-  --nexus-gray-400:    #94A3B8;
-  --nexus-gray-600:    #475569;
-  --nexus-gray-800:    #1E293B;
-  --nexus-gray-900:    #0F172A;
-}
-
-* {
-  box-sizing: border-box;
+  --nexus-navy: #0D2B5E;
+  --nexus-primary: #00A86B;
+  --nexus-primary-light: #E0F5EE;
+  --nexus-gray-50: #F8FAFC;
+  --nexus-gray-100: #F1F5F9;
+  --nexus-gray-200: #E2E8F0;
+  --nexus-gray-400: #94A3B8;
+  --nexus-gray-500: #64748B;
+  --nexus-gray-600: #475569;
+  --nexus-gray-700: #334155;
+  --nexus-gray-800: #1E293B;
+  --nexus-gray-900: #0F172A;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--nexus-gray-50);
+  font-family: 'Inter', sans-serif;
+  background: #fff;
   color: var(--nexus-gray-800);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.01em;
-}
-
-/* === GRADIENTE OFICIAL === */
-.nexus-gradient {
-  background: linear-gradient(135deg, var(--nexus-navy) 0%, var(--nexus-navy-light) 50%, var(--nexus-blue) 100%);
-}
-
-.nexus-gradient-green {
-  background: linear-gradient(135deg, var(--nexus-navy) 0%, var(--nexus-blue-dark) 60%, var(--nexus-green) 100%);
-}
-
-/* === CARDS === */
+/* Cards */
 .nexus-card {
   background: white;
-  border-radius: 14px;
+  border-radius: 1rem;
   border: 1px solid var(--nexus-gray-200);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
 .nexus-card:hover {
-  box-shadow: 0 10px 40px rgba(30, 136, 229, 0.13);
-  transform: translateY(-3px);
+  box-shadow: 0 4px 24px rgba(13,43,94,0.08);
+  transform: translateY(-1px);
 }
 
-/* === TAGS === */
+/* Tags */
 .nexus-tag {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 999px;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.01em;
 }
 
-/* === BOTÕES === */
+/* Buttons */
 .nexus-btn-primary {
-  background: var(--nexus-blue);
-  color: white;
-  padding: 10px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  font-family: 'Poppins', sans-serif;
-  transition: background 0.2s ease, transform 0.1s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 10px 20px;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: var(--nexus-primary);
+  transition: opacity 0.2s;
+  text-decoration: none;
 }
-.nexus-btn-primary:hover {
-  background: var(--nexus-blue-dark);
-  transform: translateY(-1px);
-}
+.nexus-btn-primary:hover { opacity: 0.88; }
 
 .nexus-btn-outline {
-  border: 2px solid rgba(255,255,255,0.35);
-  color: white;
-  padding: 10px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  font-family: 'Poppins', sans-serif;
-  transition: background 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-}
-.nexus-btn-outline:hover {
-  background: rgba(255,255,255,0.12);
-}
-
-/* === PROSE (artigos) === */
-.prose h2 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--nexus-navy);
-  font-weight: 700;
-  font-size: 1.35rem;
-  margin-top: 2.25rem;
-  margin-bottom: 0.75rem;
-  padding-left: 14px;
-  border-left: 4px solid var(--nexus-green);
-}
-.prose h3 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--nexus-blue-dark);
+  padding: 10px 20px;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.2s;
+  text-decoration: none;
 }
-.prose p {
-  color: var(--nexus-gray-600);
-  margin-bottom: 1.1rem;
+.nexus-btn-outline:hover { background: rgba(255,255,255,0.22); }
+
+/* =====================
+   PROSE (artigos)
+   ===================== */
+.nexus-prose {
+  color: var(--nexus-gray-800);
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
-}
-.prose ul {
-  color: var(--nexus-gray-600);
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-.prose li {
-  margin-bottom: 0.5rem;
-  position: relative;
-}
-.prose li::marker {
-  color: var(--nexus-green);
+  line-height: 1.8;
+  max-width: 72ch;
 }
 
-/* === SCROLLBAR === */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--nexus-gray-100); }
-::-webkit-scrollbar-thumb { background: var(--nexus-blue); border-radius: 3px; }
+.nexus-prose h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--nexus-navy);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--nexus-gray-100);
+}
+
+.nexus-prose h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--nexus-gray-900);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nexus-prose p {
+  margin-bottom: 1.35rem;
+  color: var(--nexus-gray-700);
+}
+
+.nexus-prose ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.35rem;
+}
+
+.nexus-prose ul li {
+  padding: 0.35rem 0 0.35rem 1.5rem;
+  position: relative;
+  color: var(--nexus-gray-700);
+}
+
+.nexus-prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--nexus-primary);
+}
+
+.nexus-prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.35rem;
+  counter-reset: nexus-counter;
+  list-style: none;
+}
+
+.nexus-prose ol li {
+  position: relative;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--nexus-gray-700);
+  counter-increment: nexus-counter;
+}
+
+.nexus-prose ol li::before {
+  content: counter(nexus-counter);
+  position: absolute;
+  left: -1.8rem;
+  top: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--nexus-navy);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nexus-prose strong {
+  font-weight: 700;
+  color: var(--nexus-gray-900);
+}
+
+.nexus-prose a {
+  color: var(--nexus-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.nexus-prose a:hover {
+  opacity: 0.8;
+}
+
+.nexus-prose blockquote {
+  border-left: 4px solid var(--nexus-primary);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--nexus-primary-light);
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-style: italic;
+  color: var(--nexus-gray-700);
+}
+
+.nexus-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.nexus-prose th {
+  background: var(--nexus-navy);
+  color: white;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.nexus-prose td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--nexus-gray-200);
+  color: var(--nexus-gray-700);
+}
+
+.nexus-prose tr:nth-child(even) td {
+  background: var(--nexus-gray-50);
+}
+
+.nexus-prose code {
+  background: var(--nexus-gray-100);
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.3rem;
+  font-size: 0.875em;
+  font-family: monospace;
+  color: var(--nexus-navy);
+}
