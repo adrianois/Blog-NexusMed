@@ -52,6 +52,7 @@ export const CATEGORIES: Category[] = [
     description: 'Captação de pacientes, redes sociais e presença digital ética.',
     color: '#00A86B',
     bg: '#E0F5EE',
+    href: '/marketing-medico',
   },
   {
     slug: 'gestao-de-equipes',
