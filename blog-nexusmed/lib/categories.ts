@@ -5,7 +5,7 @@ export interface Category {
   description: string;
   color: string;
   bg: string;
-  href?: string; // link customizado (opcional) — se não definido, usa /categorias/[slug]
+  href?: string;
 }
 
 export const CATEGORIES: Category[] = [
@@ -16,7 +16,7 @@ export const CATEGORIES: Category[] = [
     description: 'Controle de custos, receitas, faturamento e saúde financeira da clínica.',
     color: '#1565C0',
     bg: '#E3F2FD',
-    href: '/gestao-financeira', // página dedicada
+    href: '/gestao-financeira',
   },
   {
     slug: 'experiencia-do-paciente',
@@ -33,6 +33,7 @@ export const CATEGORIES: Category[] = [
     description: 'Prontuário eletrônico, telemedicina, IA e inovações digitais.',
     color: '#1E88E5',
     bg: '#E3F2FD',
+    href: '/tecnologia-em-saude',
   },
   {
     slug: 'regulamentacao',
@@ -60,7 +61,6 @@ export const CATEGORIES: Category[] = [
   },
 ];
 
-/** Retorna o href correto para uma categoria */
 export function getCategoryHref(cat: Category): string {
   return cat.href ?? `/categorias/${cat.slug}`;
 }
