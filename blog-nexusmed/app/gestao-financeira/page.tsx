@@ -19,7 +19,6 @@ export default function GestaoFinanceiraPage() {
     <>
       <GestaoFinanceiraHero />
 
-      {/* KPIs Section */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -35,7 +34,6 @@ export default function GestaoFinanceiraPage() {
         </div>
       </section>
 
-      {/* Tabela de Indicadores */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
@@ -51,7 +49,6 @@ export default function GestaoFinanceiraPage() {
         </div>
       </section>
 
-      {/* Checklists */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -64,7 +61,6 @@ export default function GestaoFinanceiraPage() {
         </div>
       </section>
 
-      {/* Artigos */}
       {posts.length > 0 && (
         <section id="artigos" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
@@ -83,7 +79,6 @@ export default function GestaoFinanceiraPage() {
         </section>
       )}
 
-      {/* CTA NexusMed */}
       <section className="py-16" style={{ background: 'var(--nexus-navy)' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">🚀</div>
@@ -94,7 +89,7 @@ export default function GestaoFinanceiraPage() {
             O NexusMed integra faturamento, fluxo de caixa, controle de convênios e relatórios financeiros em um único painel. Experimente grátis por 14 dias.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#1565C0' }}>
+            <a href="https://www.instagram.com/nexusmed.app" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#1565C0' }}>
               Experimentar Grátis
             </a>
             <Link href="/blog" className="nexus-btn-outline">Ver Todos os Artigos</Link>

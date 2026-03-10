@@ -6,6 +6,7 @@ import TecHero from '@/components/tecnologia-em-saude/TecHero';
 import TendenciasCards from '@/components/tecnologia-em-saude/TendenciasCards';
 import FerramentasTable from '@/components/tecnologia-em-saude/FerramentasTable';
 import ChecklistDigital from '@/components/tecnologia-em-saude/ChecklistDigital';
+import TechTimeline from '@/components/tecnologia-em-saude/Timeline';
 
 export const metadata = {
   title: 'Tecnologia em Saúde | Blog NexusMed',
@@ -19,7 +20,6 @@ export default function TecnologiaEmSaudePage() {
     <>
       <TecHero />
 
-      {/* Tendências */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -35,7 +35,6 @@ export default function TecnologiaEmSaudePage() {
         </div>
       </section>
 
-      {/* Comparativo de Ferramentas */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
@@ -51,7 +50,6 @@ export default function TecnologiaEmSaudePage() {
         </div>
       </section>
 
-      {/* Checklist de Maturidade Digital */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -67,7 +65,6 @@ export default function TecnologiaEmSaudePage() {
         </div>
       </section>
 
-      {/* Artigos */}
       {posts.length > 0 && (
         <section id="artigos" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
@@ -86,7 +83,6 @@ export default function TecnologiaEmSaudePage() {
         </section>
       )}
 
-      {/* CTA */}
       <section className="py-16" style={{ background: 'var(--nexus-navy)' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">💻</div>
@@ -97,12 +93,10 @@ export default function TecnologiaEmSaudePage() {
             O NexusMed reúne prontuário eletrônico, telemedicina, agendamento online e inteligência de dados em uma única plataforma. Experimente grátis por 14 dias.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: 'var(--nexus-green)' }}>
+            <a href="https://www.instagram.com/nexusmed.app" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: 'var(--nexus-green)' }}>
               Experimentar Grátis
             </a>
-            <Link href="/blog" className="nexus-btn-outline">
-              Ver Todos os Artigos
-            </Link>
+            <Link href="/blog" className="nexus-btn-outline">Ver Todos os Artigos</Link>
           </div>
         </div>
       </section>

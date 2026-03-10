@@ -19,7 +19,6 @@ export default function ExperienciaDoPackientePage() {
     <>
       <ExpHero />
 
-      {/* Pilares */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -35,7 +34,6 @@ export default function ExperienciaDoPackientePage() {
         </div>
       </section>
 
-      {/* Jornada do Paciente */}
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -51,7 +49,6 @@ export default function ExperienciaDoPackientePage() {
         </div>
       </section>
 
-      {/* Checklist */}
       <section id="checklist" className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -67,7 +64,6 @@ export default function ExperienciaDoPackientePage() {
         </div>
       </section>
 
-      {/* Artigos */}
       {posts.length > 0 && (
         <section id="artigos" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
@@ -86,7 +82,6 @@ export default function ExperienciaDoPackientePage() {
         </section>
       )}
 
-      {/* CTA */}
       <section className="py-16" style={{ background: 'var(--nexus-navy)' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">🤝</div>
@@ -97,7 +92,7 @@ export default function ExperienciaDoPackientePage() {
             O NexusMed integra agendamento online, confirmações automáticas, pesquisa de NPS e portal do paciente em uma única plataforma — tudo para criar uma jornada excepcional.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#00875A' }}>
+            <a href="https://www.instagram.com/nexusmed.app" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#00875A' }}>
               Experimentar Grátis
             </a>
             <Link href="/blog" className="nexus-btn-outline">Ver Todos os Artigos</Link>

@@ -19,7 +19,6 @@ export default function RegulamentacaoPage() {
     <>
       <RegHero />
 
-      {/* Principais Normas */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -35,7 +34,6 @@ export default function RegulamentacaoPage() {
         </div>
       </section>
 
-      {/* Órgãos Reguladores */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
@@ -51,7 +49,6 @@ export default function RegulamentacaoPage() {
         </div>
       </section>
 
-      {/* Checklist de Conformidade */}
       <section className="py-16" style={{ background: 'var(--nexus-gray-50)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -67,7 +64,6 @@ export default function RegulamentacaoPage() {
         </div>
       </section>
 
-      {/* Artigos */}
       {posts.length > 0 && (
         <section id="artigos" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
@@ -86,7 +82,6 @@ export default function RegulamentacaoPage() {
         </section>
       )}
 
-      {/* CTA */}
       <section className="py-16" style={{ background: 'var(--nexus-navy)' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">⚖️</div>
@@ -97,12 +92,10 @@ export default function RegulamentacaoPage() {
             O NexusMed é desenvolvido em conformidade com CFM, LGPD, ANS e ANVISA. Prontuário eletrônico, assinatura digital e armazenamento seguro de dados — tudo para sua clínica operar com tranquilidade jurídica.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#B45309' }}>
+            <a href="https://www.instagram.com/nexusmed.app" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary" style={{ background: '#B45309' }}>
               Conhecer o NexusMed
             </a>
-            <Link href="/blog" className="nexus-btn-outline">
-              Ver Todos os Artigos
-            </Link>
+            <Link href="/blog" className="nexus-btn-outline">Ver Todos os Artigos</Link>
           </div>
         </div>
       </section>
