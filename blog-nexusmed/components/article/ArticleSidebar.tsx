@@ -88,7 +88,7 @@ export default function ArticleSidebar({ post, allPosts }: Props) {
         <h3 className="font-bold text-sm mb-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Automatize sua clínica</h3>
         <p className="text-xs mb-3 leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>Agendamento, confirmação e NPS no piloto automático.</p>
         <a
-          href="https://nexusmed.com.br"
+          href="https://www.instagram.com/nexusmed.app"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-center text-xs font-semibold py-2 px-4 rounded-xl transition-opacity hover:opacity-90"
