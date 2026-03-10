@@ -136,18 +136,18 @@ const POSTS: Post[] = [
   {
     slug: 'telemedicina-guia-completo-clinicas',
     title: 'Telemedicina para Clínicas: Guia Completo para Implementar com Segurança',
-    excerpt: 'Da regulamentação CFM à escolha da plataforma: tudo o que sua clínica precisa saber para oferecer consultas por vídeo de forma legal e eficaz.',
+    excerpt: 'Da regulamentação CFM à escolha da plataforma: tudo que sua clínica precisa saber para oferecer consultas por vídeo de forma legal e eficaz.',
     content: `
       <h2>Telemedicina é Legal no Brasil?</h2>
-      <p>Sim. A Resolução CFM 2.314/22 regulamentou definitivamente a telemedicina no Brasil, permitindo consultas, telediagnóstico e telemonitoramento com regras claras de documentação e consentimento.</p>
+      <p>Sim. A Resolução CFM 2.314/22 regulamentou definitivamente a telemedicina no Brasil, permitindo consultas, telediagnóstico e telemonitoramento com regras claras.</p>
       <h2>O Que é Permitido</h2>
       <p>Consultas de primeira vez e retorno por vídeo, emissão de atestados e receitas digitais com assinatura eletrônica ICP-Brasil, teleconsultoria entre profissionais e telemonitoramento de pacientes crônicos.</p>
       <h2>Requisitos Técnicos</h2>
       <p>A plataforma deve garantir: sigilo da comunicação (criptografia ponta a ponta), identificação segura do paciente, registro do atendimento no prontuário e consentimento informado digital.</p>
       <h2>Escolhendo a Plataforma</h2>
-      <p>Prefira plataformas integradas ao seu PEP, com gravação opcional, sala de espera virtual e integração com agenda. Evite usar plataformas genéricas como WhatsApp ou Zoom sem adequação à LGPD.</p>
+      <p>Prefira plataformas integradas ao seu PEP, com gravação opcional, sala de espera virtual e integração com agenda. Evite usar WhatsApp ou Zoom sem adequação à LGPD.</p>
       <h2>Como Cobrar pela Teleconsulta</h2>
-      <p>Defina valores para teleconsulta particular e verifique a cobertura de cada convênio. Alguns planos já remuneram telemedicina com tabela própria. Documente tudo no prontuário como em uma consulta presencial.</p>
+      <p>Defina valores para teleconsulta particular e verifique a cobertura de cada convênio. Documente tudo no prontuário como em uma consulta presencial.</p>
     `,
     category: 'tecnologia-em-saude',
     categoryName: 'Tecnologia em Saúde',
@@ -166,13 +166,13 @@ const POSTS: Post[] = [
       <h2>IA Não é Ficção Científica</h2>
       <p>Ferramentas de inteligência artificial já estão sendo usadas em clínicas brasileiras para análise de imagens, triagem de pacientes, automação de cobranças e previsão de demanda.</p>
       <h2>IA no Apoio ao Diagnóstico</h2>
-      <p>Algoritmos treinados em milhões de imagens conseguem identificar padrões em radiografias, eletrocardiogramas e dermatoscopias com precisão equivalente ou superior a especialistas. Eles funcionam como um segundo par de olhos, não como substitutos.</p>
+      <p>Algoritmos treinados em milhões de imagens conseguem identificar padrões em radiografias, eletrocardiogramas e dermatoscopias. Eles funcionam como um segundo par de olhos, não como substitutos.</p>
       <h2>IA na Gestão Administrativa</h2>
-      <p>Previsão automática de no-shows, sugestão de horários ótimos, chatbots de triagem e classificação de urgência, automação de cobranças e relatórios gerados em segundos.</p>
+      <p>Previsão automática de no-shows, sugestão de horários ótimos, chatbots de triagem, automação de cobranças e relatórios gerados em segundos.</p>
       <h2>Cuidados Éticos e Regulatórios</h2>
-      <p>O CFM ainda discute regulamentação específica para IA. Por enquanto, a responsabilidade pelo diagnóstico continua sendo sempre do médico. A IA é uma ferramenta de apoio, nunca de substituição.</p>
+      <p>A responsabilidade pelo diagnóstico continua sendo sempre do médico. A IA é uma ferramenta de apoio, nunca de substituição.</p>
       <h2>Por Onde Começar</h2>
-      <p>Comece com automações simples: confirmação automática de consultas, triagem via chatbot no WhatsApp e relatórios financeiros automáticos. Depois evolua para ferramentas de apoio clínico.</p>
+      <p>Comece com automações simples: confirmação automática de consultas, triagem via chatbot no WhatsApp e relatórios financeiros automáticos.</p>
     `,
     category: 'tecnologia-em-saude',
     categoryName: 'Tecnologia em Saúde',
@@ -182,6 +182,31 @@ const POSTS: Post[] = [
     readTime: 7,
     tags: ['IA', 'inteligência artificial', 'diagnóstico'],
     coverEmoji: '🤖',
+  },
+  {
+    slug: 'seguranca-de-dados-clinica',
+    title: 'Segurança de Dados na Clínica: Guia Prático para Proteger Prontuários',
+    excerpt: 'Como proteger os dados dos seus pacientes contra vazamentos, ataques cibernéticos e violações da LGPD com medidas práticas e acessíveis.',
+    content: `
+      <h2>O Cenário de Ameaças em Saúde</h2>
+      <p>Clínicas são alvos frequentes de ataques cibernéticos porque armazenam dados médicos sensíveis, historicamente protegidos de forma precária. Em 2025, o setor de saúde foi o segundo mais atacado no Brasil.</p>
+      <h2>Medidas Técnicas Essenciais</h2>
+      <p>Criptografia de dados em repouso e em trânsito, autenticação de dois fatores (2FA) para todos os usuários do sistema, senhas fortes por política e backup automático diário na nuvem.</p>
+      <h2>Controle de Acesso por Perfil</h2>
+      <p>Cada membro da equipe deve ter acesso apenas às informações necessárias para sua função. Recepcionista não precisa ver o conteúdo clínico do prontuário, e vice-versa.</p>
+      <h2>Treinamento da Equipe</h2>
+      <p>90% dos incidentes de segurança começam por erro humano: clicar em phishing, usar senhas fracas ou compartilhar credenciais. Treine sua equipe semestralmente.</p>
+      <h2>Plano de Resposta a Incidentes</h2>
+      <p>Tenha um procedimento documentado para o caso de vazamento: quem notificar (ANPD em até 72h), como isolar o sistema, como comunicar os pacientes afetados e como retomar as operações.</p>
+    `,
+    category: 'tecnologia-em-saude',
+    categoryName: 'Tecnologia em Saúde',
+    author: 'Equipe NexusMed',
+    authorRole: 'Segurança & Compliance',
+    date: '2026-02-22',
+    readTime: 8,
+    tags: ['segurança', 'LGPD', 'cibersegurança', 'prontuário'],
+    coverEmoji: '🔐',
   },
   {
     slug: 'lgpd-clinicas-guia-pratico',
