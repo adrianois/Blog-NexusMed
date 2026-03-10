@@ -62,7 +62,14 @@ export default function Header() {
             </div>
 
             <Link href="/sobre" className="text-sm font-medium transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter, sans-serif' }}>Sobre</Link>
-            <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="nexus-btn-primary">Conheça o Sistema</a>
+            <a
+              href="https://www.instagram.com/nexusmed.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nexus-btn-primary"
+            >
+              Conheça o Sistema
+            </a>
           </nav>
 
           {/* Mobile Button */}
@@ -89,11 +96,18 @@ export default function Header() {
                 >
                   <span>{cat.icon}</span>
                   <span>{cat.name}</span>
-                  {cat.href && <span className="ml-auto text-xs font-bold" style={{ color: 'var(--nexus-green)' }}>★</span>}
+                  {cat.href && <span className="ml-auto text-xs font-bold" style={{ color: 'var(--nexus-green)' }}>&#9733;</span>}
                 </Link>
               ))}
               <Link href="/sobre" className="px-3 py-2.5 rounded-xl text-sm font-medium text-white hover:bg-white/10" onClick={() => setMenuOpen(false)}>Sobre</Link>
-              <a href="https://nexusmed.com.br" target="_blank" rel="noopener noreferrer" className="mt-2 nexus-btn-primary justify-center">Conheça o Sistema</a>
+              <a
+                href="https://www.instagram.com/nexusmed.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 nexus-btn-primary justify-center"
+              >
+                Conheça o Sistema
+              </a>
             </div>
           </div>
         )}
