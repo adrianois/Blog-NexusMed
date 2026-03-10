@@ -61,6 +61,7 @@ export const CATEGORIES: Category[] = [
     description: 'Liderança, contratação, cultura e desempenho de equipes clínicas.',
     color: '#0D2B5E',
     bg: '#EFF6FF',
+    href: '/gestao-de-equipes',
   },
 ];
 
