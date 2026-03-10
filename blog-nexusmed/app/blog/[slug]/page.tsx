@@ -11,8 +11,9 @@ export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return {};
   return {
     title: `${post.title} | Blog NexusMed`,
@@ -25,8 +26,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const allPosts = getAllPosts();
@@ -43,20 +45,16 @@ export default function PostPage({ params }: { params: { slug: string } }) {
 
       <div className="max-w-6xl mx-auto px-4 py-10">
         <div className="flex flex-col lg:flex-row gap-10">
-          {/* Conteúdo principal */}
           <main className="flex-1 min-w-0">
             <ArticleBody post={post} />
             <ArticleNav prevPost={prevPost} nextPost={nextPost} />
           </main>
-
-          {/* Sidebar */}
           <aside className="w-full lg:w-80 flex-shrink-0">
             <ArticleSidebar post={post} allPosts={allPosts} />
           </aside>
         </div>
       </div>
 
-      {/* Artigos relacionados */}
       {related.length > 0 && (
         <section className="py-14" style={{ background: 'var(--nexus-gray-50)' }}>
           <div className="max-w-6xl mx-auto px-4">
@@ -65,7 +63,6 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      {/* Newsletter */}
       <div className="max-w-6xl mx-auto px-4 py-10">
         <Newsletter />
       </div>
