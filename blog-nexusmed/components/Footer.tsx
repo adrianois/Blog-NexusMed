@@ -82,13 +82,15 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#6EE7B7', fontFamily: 'Poppins, sans-serif' }}>Blog</h3>
             <ul className="space-y-2.5">
               {[
-                { href: '/blog', label: 'Todos os Artigos' },
-                { href: '/sobre', label: 'Sobre o Blog' },
-                { href: 'https://nexusmed.com.br', label: 'Site NexusMed ↗' },
+                { href: '/blog', label: 'Todos os Artigos', external: false },
+                { href: '/sobre', label: 'Sobre o Blog', external: false },
+                { href: 'https://www.instagram.com/nexusmed.app', label: 'Instagram NexusMed ↗', external: true },
               ].map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
                     className="text-sm transition-colors hover:text-white"
                     style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Inter, sans-serif' }}
                   >
