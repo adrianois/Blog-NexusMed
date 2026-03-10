@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CATEGORIES } from '@/lib/categories';
+import { CATEGORIES, getCategoryHref } from '@/lib/categories';
 
 export default function Footer() {
   return (
@@ -18,14 +18,14 @@ export default function Footer() {
                 <circle cx="18" cy="18" r="2.5" fill="white"/>
               </svg>
               <span className="font-bold text-xl" style={{ fontFamily: 'Poppins, sans-serif', color: 'white' }}>
-                Nexus<span style={{ color: 'var(--nexus-green)' }}>Med</span>
+                Nexus<span style={{ color: '#6EE7B7' }}>Med</span>
               </span>
             </div>
             <p className="text-sm mb-5 leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)', maxWidth: '280px', fontFamily: 'Inter, sans-serif' }}>
               Gestão completa para clínicas modernas. Conteúdo especializado para profissionais de saúde.
             </p>
             <div className="flex gap-2">
-              {[{ label: 'in', hover: '#0A66C2' }, { label: 'ig', hover: '#E1306C' }, { label: 'yt', hover: '#FF0000' }].map((s) => (
+              {[{ label: 'in' }, { label: 'ig' }, { label: 'yt' }].map((s) => (
                 <a key={s.label} href="#"
                   className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white transition-colors"
                   style={{ background: 'rgba(255,255,255,0.1)', fontFamily: 'Poppins, sans-serif' }}
@@ -38,11 +38,13 @@ export default function Footer() {
 
           {/* Categorias */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--nexus-green)', fontFamily: 'Poppins, sans-serif' }}>Categorias</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#6EE7B7', fontFamily: 'Poppins, sans-serif' }}>Categorias</h3>
             <ul className="space-y-2.5">
               {CATEGORIES.map((cat) => (
                 <li key={cat.slug}>
-                  <Link href={`/categorias/${cat.slug}`} className="text-sm transition-colors hover:text-white flex items-center gap-2"
+                  <Link
+                    href={getCategoryHref(cat)}
+                    className="text-sm transition-colors hover:text-white flex items-center gap-2"
                     style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Inter, sans-serif' }}
                   >
                     <span>{cat.icon}</span> {cat.name}
@@ -54,7 +56,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--nexus-green)', fontFamily: 'Poppins, sans-serif' }}>Blog</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#6EE7B7', fontFamily: 'Poppins, sans-serif' }}>Blog</h3>
             <ul className="space-y-2.5">
               {[
                 { href: '/blog', label: 'Todos os Artigos' },
